@@ -20,7 +20,7 @@ j=0
 
 followers=[]
 
-while j<total_follower:
+while j+1<total_follower:
     elem=list(browser.find_elements_by_css_selector("a.FPmhX.notranslate.zsYNt"))
     for i in range(j,len(elem)):
         followers.append(elem[i].get_attribute("title"))
