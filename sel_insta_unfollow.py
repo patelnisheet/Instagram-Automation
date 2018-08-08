@@ -11,7 +11,7 @@ sleep(5)
 browser.get("https://www.instagram.com/username/followers/")    #username
 sleep(2)
 
-total_follower=int(browser.find_elements_by_xpath("//ul/li/a/span")[1].get_attribute("innerHTML"))
+total_follower=int(browser.find_elements_by_xpath("//ul/li/a/span")[0].get_attribute("innerHTML"))
 total_following=int(browser.find_elements_by_xpath("//ul/li/a/span")[1].get_attribute("innerHTML"))
 
 browser.find_element_by_partial_link_text("followers").click()
